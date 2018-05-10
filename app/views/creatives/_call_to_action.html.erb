@@ -1,0 +1,20 @@
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Inscris toi à notre newsletter pour recevoir de plus amples informations !</h2>
+            <a class="btn btn-default btn-xl wow tada" id="open-popup">S'inscrire</a>
+        </div>
+    </div>
+</aside>
+
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+
+<script>
+function showMailingPopUp() {
+    require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"3e344276e63f3134fc9900c75","lid":"8a2eab8eee"}) })
+    document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+};
+
+document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+</script>
+
